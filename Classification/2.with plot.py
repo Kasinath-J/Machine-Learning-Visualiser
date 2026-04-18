@@ -64,10 +64,5 @@ while(cost()>=0.2):
     #time.sleep(0.2)
 
 print("final theta1",theta)
-
-
-
-
-
-
-
+plt.ioff()
+plt.show()

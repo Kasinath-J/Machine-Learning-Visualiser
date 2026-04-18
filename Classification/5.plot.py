@@ -56,10 +56,10 @@ while(cost()>=0.1 and i<2000):
     y_all[i] = y_test
     i+=1
 
-y_all.reshape(i,size,size)
+y_all = y_all[:i]
 ##for plotting
 
-fig = plt.figure( figsize=(25,25))
+fig = plt.figure(figsize=(10,8))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(X[1],X[2],y)
 plot = [ax.plot_surface(X1, X2, y_all[0], color='0.75')]
@@ -70,6 +70,6 @@ def update_plot(frame_number, y_all, plot):
     plot[0] = ax.plot_surface(X1, X2, y_all[frame_number], cmap="magma")
     print(frame_number)
 
-animate = animation.FuncAnimation(fig, update_plot, len(y_all), interval = 1,fargs=(y_all, plot))
+animate = animation.FuncAnimation(fig, update_plot, frames=i, interval=20, fargs=(y_all, plot))
 plt.show()
 

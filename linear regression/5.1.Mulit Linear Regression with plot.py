@@ -37,12 +37,12 @@ def cost():
 
 #for plotting
 plt.ion()
-fig = plt.figure(figsize=(25,25))
+fig = plt.figure(figsize=(10,8))
 ax = fig.add_subplot(111, projection='3d')
 ax.set_xlim(0, max(X[1]))
-ax.set_ylim(0, max(y))
-#line1,= ax.plot(X[1],X[2], np.zeros(m),color = 'r')
-line1,= ax.plot(0,0,0,color = 'r')
+ax.set_ylim(0, max(X[2]))
+ax.set_zlim(0, max(y))
+line1,= ax.plot([0],[0],[0],color = 'r')
 scatter1= ax.scatter(X[1],X[2],y,color = 'g')
 plt.title("Linear Regression", fontsize=15)
 plt.xlabel("X1")
@@ -76,11 +76,12 @@ while(cost()>=0.01):
 
     fig.canvas.draw()
     fig.canvas.flush_events()
-    #time.sleep(0.1)
+    plt.pause(0.01)
     #print("thetas : ",theta[0]," ",theta[1]," ",theta[2])
 
 print("final theta1",theta[0],theta[1],theta[2])
-
+plt.ioff()
+plt.show()
 
 
 
