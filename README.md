@@ -4,6 +4,12 @@ Visualising basic Machine Learning algorithms from scratch, inspired by Andrew N
 
 This repository implements fundamental Machine Learning models using pure mathematics (via `numpy`) and visually plots the model's learning process in real-time (via `matplotlib`). With these tools, you can actually watch the gradient descent algorithm adjust its parameters and converge towards lower cost functions.
 
+## Multi Linear Regression
+<img height="400" src="https://github.com/Kasinath-J/Machine-Learning-Visualiser/blob/main/assets/multiLinearRegression.gif">
+
+## Multi Logistic Regression
+<img height="400" src="https://github.com/Kasinath-J/Machine-Learning-Visualiser/blob/main/assets/multiLinearClassification.gif">
+
 ## Included Models
 
 ### 1. Linear Regression
